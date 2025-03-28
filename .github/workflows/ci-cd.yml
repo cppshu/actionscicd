@@ -56,7 +56,8 @@ jobs:
             git checkout -b release
           fi
           
-          git merge main
+          # Use --allow-unrelated-histories to force the merge
+          git merge --allow-unrelated-histories main
           git add linear_model.txt
           git commit -m "Update linear model"
           git push origin release
